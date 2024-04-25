@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+
+{% block content %}
+<!--{% with msgs = get_flashed_messages(with_categories=True) %}-->
+<!--        {% for category, message in msgs %}-->
+<!--            {% if category == 'error' %}-->
+<!--                <div class="flash-error">-->
+<!--                    {{ message | safe }}-->
+<!--                </div>-->
+<!--            {% else %}-->
+<!--                <div class="success">-->
+<!--                    {{ message | safe }}-->
+<!--                </div>-->
+<!--            {% endif %}-->
+<!--        {% endfor %}-->
+<!--    {% endwith %}-->
+<div class="cool_div">
+<div class="forms">
+    {{ wtf.quick_form(form) }}
+</div>
+</div>
+{% endblock%}
