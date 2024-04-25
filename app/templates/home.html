@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <br><br><h3>Усі наші опитування:</h3><br>
+    <div class="surveys">
+    {% for survey in surveys %}
+     {% if survey == None %}
+     <h3>Упс в нас ще немає опитувань.</h3><br>
+      <h4>Але саме ви можете створити наше перше опитування</h4>
+     {% else%}
+     <div class="survey">
+     <h5>
+    Імя:{{ survey.title }}
+         </h5>
+       <h5>Творець:{{survey.author}}</h5><br>
+    <p>Опис:{{ survey.description }}</p><br>
+       <a class="btn btn-secondary" href="{{url_for('fill_survey', id=survey.id)}}">Пройти</a>
+</div>
+{%endif%}
+{% endfor %}
+</div>
+{% endblock %}
+
