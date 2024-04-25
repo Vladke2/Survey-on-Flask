@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title%} Profile {% endblock %}
+
+{% block content %}
+<center>
+<div ><h1>Ім'я: {{ name }}</h1>
+        {% if about_me %}
+    <a><h3>Про мене: {{ about_me }}</h3></a>
+    {% endif %}
+        {% if last_seen %}<p>Був онлайн: {{ last_seen }}</p>{% endif %}
+    {% if user == current_user %}<p><a href="{{ url_for('edit_profile') }}">Відредагувати профіль</a></p>{% endif%}
+</div>
+</center>
+
+{% endblock %}
