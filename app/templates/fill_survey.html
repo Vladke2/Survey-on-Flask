@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %} Fill Servey  {% endblock %}
+
+
+{% block content %}
+<div>
+<div class="forms">
+    <h2>{{question}}</h2>
+    {{ wtf.quick_form(form) }}
+</div>
+</div>
+
+
+{% endblock %}
