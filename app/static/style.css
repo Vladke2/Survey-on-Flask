@@ -1,0 +1,159 @@
+.main {
+ padding: 10vh 0;
+}
+
+a:hover {
+ text-decoration: none;
+}
+
+.navbar {
+ padding: .7rem 6rem;
+ box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+footer {
+ box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.2), 1px 0 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.forms, .flash-error, .success {
+ margin: 0 auto;
+ max-width: 400px;
+}
+
+form .btn {
+ background: #007bff;
+ color: white;
+ border-radius: 5px;
+}
+
+.flash-error, .help-block, .success {
+ text-align: center;
+ padding: 5px;
+ font-weight:bold;
+}
+
+.flash-error, .help-block {
+ color: red;
+}
+
+.success {
+ color:green;
+}
+
+.pic {
+ width:150px;
+ height: 150px;
+}
+
+.right-item {
+ float:right;
+ color:green;
+}
+
+.check {
+ max-width: 300px;
+ margin: 0 auto;
+ margin-top: 50px;
+ font-weight: bold;
+}
+
+.checkout {
+ cursor:pointer;
+ padding: 5px;
+ border-radius:5px;
+}
+
+.details {
+ padding: 15px 0;
+}
+
+.checked {
+ color: orange;
+}
+
+@media only screen and (max-width: 600px) {
+ .navbar {
+  padding: .3rem 1rem;
+ }
+}
+
+.cool_div {
+min-width: 100%;
+    min-height: 100%;
+    position: relative;
+-webkit-border-radius: 15px;
+
+-moz-border-radius: 15px;
+
+border-radius: 15px;
+
+background-image: -moz-linear-gradient(left, #AFEEEE, #FFE4B5);
+
+background-image: -webkit-gradient(linear, left top, right top, color-stop(0.00, #AFEEEE), color-stop(1.0, #FFE4B5));
+
+border: 0px solid #000000;
+
+background-color: #FFFFFF;
+
+padding: 18px;
+
+font-family: Verdana, Geneva, sans-serif;
+
+font-size: 13pt;
+
+color: #000000;
+
+text-align: center;
+
+outline: 0px solid #000000;
+
+}
+
+
+.cool_div2 {
+min-width: 100%;
+    min-height: 100%;
+    position: relative;
+background-image: -moz-linear-gradient(left, #AFEEEE, #FFE4B5);
+
+background-image: -webkit-gradient(linear, left top, right top, color-stop(0.00, #AFEEEE), color-stop(1.0, #FFE4B5));
+
+border: 0px solid #000000;
+
+background-color: #FFFFFF;
+
+padding: 18px;
+
+font-family: Verdana, Geneva, sans-serif;
+
+font-size: 13pt;
+
+color: #000000;
+
+text-align: center;
+
+outline: 0px solid #000000;
+
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+.survey {
+ width:250px;
+ padding: 12px;
+ box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+ border-radius: 5px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+.surveys {
+ max-width: 900px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
+ gap: 70px;
+}
