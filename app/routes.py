@@ -3,7 +3,7 @@ from flask_login import current_user, login_required
 from .models import session, User, Poll, SurveyResponses
 from datetime import datetime
 from app import app
-from .form import EditProfileForm, CreateSurveyForm, FillSurveyForm
+from .form import EditProfileForm, CreateSurveyForm
 
 
 @app.route('/')
@@ -86,10 +86,16 @@ def create_survey():
 @app.route('/fill_survey/<id>', methods=['GET', 'POST'])
 @login_required
 def fill_survey(id):
-    with open('survey_id.txt', 'w') as env:
-        env.write(f'id={id}')
     poll = session.query(Poll).filter_by(id=id).first()
     user = session.query(User).filter_by(id=current_user.id).first()
+    
+    class FillSurveyForm(FlaskForm):
+        poll = session.query(Poll).filter_by(id=id).first()
+        first_answer_options = RadioField(poll.question, choices=[poll.answer_one, poll.answer_two, poll.answer_tree,
+                                                                  poll.answer_four, poll.answer_five],
+                                          validators=[DataRequired()])
+        submit = SubmitField('Submit')
+
     form = FillSurveyForm()
 
     if form.validate_on_submit():
